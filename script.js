@@ -200,14 +200,98 @@ lines')
 console.log(`String with
 multiple
 lines`)
-*/
 
 
 // 18. Taking Decisions: if / else Statements
 
-const age = 19;
-const isOldEnough = age >= 18;
+const age = 15;
 
-if(isOldEnough) {
-    console.log('Sarah can start driving license 🚗')
+if(age >= 18) {
+    console.log(`Sarah can start driving license 🚗`);
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`)
 }
+
+
+const birthYear = 2021;
+
+let century;
+if(birthYear<= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century);
+
+// 19. CODING CHALLENGE #2
+
+1. Print a nice output to the console, saying wo has the higher BMI. The message can be either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+
+2. Use a template string to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
+
+// TEST DATA 1
+// const massMark = 78;
+// const heightMark = 1.69;
+// const massJohn = 92;
+// const heightJohn = 1.95;
+
+// TEST DATA 2
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
+
+// BMI CALCULATOR
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+const markHigherBMI = BMIMark > BMIJohn;
+
+console.log(BMIMark, BMIJohn);
+console.log(`Mark's BMI is ${BMIMark}`)
+console.log(`John's BMI is ${BMIJohn}`)
+
+if(BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`)
+} else {
+    console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`)
+}
+
+
+// 20. Type Conversion and Coercion
+
+// type conversion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas'));
+// NaN = Not a Number.
+console.log(typeof NaN);
+// typeof NaN print to number.
+console.log(String(23), 23);
+// JS can typed number, string and Boolean.
+
+// type coercion
+console.log('I am ' + 23 + ' years old');
+console.log('I am ' + '23' + ' years old');
+console.log('I am ' + String(23) + ' years old');
+
+console.log('23' - '10' - 3);
+// printed 10
+console.log('23' + '10' + 3);
+// printed 23103
+console.log('23' * '2');
+// printed 46
+console.log('23' / '2');
+// printed 11.5
+
+let n = '1' + 1 ;
+n = n - 1;
+console.log(n);
+// printed 10
+*/
+
+
+// 21. Truthy and Falsy Values
