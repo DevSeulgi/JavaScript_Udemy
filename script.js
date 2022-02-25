@@ -291,7 +291,68 @@ let n = '1' + 1 ;
 n = n - 1;
 console.log(n);
 // printed 10
-*/
+
 
 
 // 21. Truthy and Falsy Values
+// 5 falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));    //false//
+console.log(Boolean(undefined));    //false//
+console.log(Boolean('Seulgi'));     //true//
+console.log(Boolean({}));   //true//
+console.log(Boolean(''));    //false//
+
+const money = 100;
+if(money) {
+    console.log("Don't spend it all :(");
+} else {
+    console.log('You should get a job!');
+}
+
+let height;
+if(height) {
+    console.log('YAY! Height is defined');
+} else {
+    console.log('Height is UNDEFINED');
+}
+
+
+
+// 22. Equality Operators: == vs. ===
+
+const age = '18';
+if(age === 18) console.log('You just became an adult :D (strict)');
+if(age == 18) console.log('You just became an adult :D (loose)');
+// 되도록 === 을 사용하고 == 사용은 지양하자
+
+    // 18 === 18
+    // true
+    // 18 === 19
+    // false
+    // '18' == 18
+    // true
+    // '18' === 18
+    // false
+
+const favorite = Number(prompt("What's your favorite number?"));
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite === 22) { // 22 === 23 FALSE
+    console.log('Cool! 22 is an amazing number!')
+} else if(favorite === 7) {
+    console.log('7 is also a cool number')
+} else if (favorite === 9) {
+    console.log('9 is also a cool number')
+} else {
+    console.log('Number is not 22 or 7 or 9')
+}
+
+if(favorite !== 22) console.log('why not 22?')
+//! means not
+*/
+
+
+
+// 23. Boolean Logic
