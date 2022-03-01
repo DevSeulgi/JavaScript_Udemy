@@ -356,3 +356,28 @@ if(favorite !== 22) console.log('why not 22?')
 
 
 // 23. Boolean Logic
+// 24. Logical Operators
+
+const hasDriversLicense = true; // A
+const hasGoodVision = false; // B
+
+console.log(hasDriversLicense && hasGoodVision); // false
+console.log(hasDriversLicense || hasGoodVision); // true
+console.log(!hasGoodVision); // false
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if(hasDriversLicense && hasGoodVision) {
+//     console.log('Sarah is able to drive!')
+// } else {
+//     console.log('Someone else should drive...')
+// }
+
+const isTired = true; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if(hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...');
+} // Someone else should drive...
